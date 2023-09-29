@@ -132,21 +132,25 @@ body {
 }
 
 body {
-    --bg: #dee2e6;
+    --bg: #d8f3dc;
+    --theme-1: #95d5b2;
+    --theme-2: #52b788;
+    --text-theme: #1b4332;
     background: var(--bg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
 }
 
 header {
-    background: #f8f9fa;
+    background: #b7e4c7;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 12px;
+    padding: 6px 15px;
     min-height: 5%;
     font-size: 16px;
     padding-top: 0px;
+    border-bottom: 2px solid var(--theme-2);
 }
 
 header input {
@@ -160,7 +164,7 @@ header input {
     background: none;
     filter: grayscale(100%);
     background: none;
-    color: #343a40;
+    color: var(--text-theme);
 }
 
 header > div {
@@ -179,17 +183,38 @@ form > button {
     border: 0px;
     background: none;
     font-size: 1.1em;
-    color: #495057;
-    border-left: 2px solid #6c757d;
+    color: var(--text-theme);
+    border-left: 2px solid var(--theme-2);
 }
 
 form {
     display: flex;
-    background: #ced4da;
+    background: var(--theme-1);
     border-radius: 5px;
     padding: 0px 4px;
     height: 25px;
-    border: 2px solid #6c757d;
+    border: 2px solid var(--theme-2);
 }
 
-/* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+.tempmode {
+    background: #dee2e6;
+    font-size: 1.1em;
+    background: var(--theme-1);
+    border: 2px solid var(--theme-2);
+    border-radius: 5px;
+    color: var(--text-theme);
+}
+
+.search {
+    display: grid;
+    grid-template: 1fr 1em / 1fr;
+    gap: 2px;
+    align-self: last baseline;
+}
+
+.error-msg {
+    font-size: 0.8em;
+    padding-left: 4px;
+    color: red;
+}
+/* https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15 */
