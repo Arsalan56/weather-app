@@ -3,7 +3,7 @@ import './icon.png';
 
 import GetWeather from './getWeather';
 
-document.querySelector('form').addEventListener('submit', (e) => {
+document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    GetWeather(document.querySelector('input').value);
+    console.log(await GetWeather(document.querySelector('input').value));
 });
