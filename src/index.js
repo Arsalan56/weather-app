@@ -5,5 +5,6 @@ import GetWeather from './getWeather';
 
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    console.log(await GetWeather(document.querySelector('input').value));
+    const weather = await GetWeather(document.querySelector('input').value);
+    console.log(weather);
 });
