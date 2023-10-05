@@ -223,6 +223,7 @@ form {
 
 main {
     display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .castCont {
@@ -231,30 +232,58 @@ main {
 }
 
 .location {
-    flex-grow: 3;
-    min-width: 275px;
+    flex-grow: 1;
+    min-width: 250px;
 }
 
 .hourlyCast {
-    flex-grow: 10;
+    flex-grow: 4;
     min-width: 400px;
     /* height: min-content; */
 }
 
 .castCont > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-main h1 {
-    font-size: 2em;
+.location h2,
+.location h1,
+.location p {
     text-align: center;
 }
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    /* height: min-content; */
+}
+
+.location > h2 {
+    margin-bottom: 10px;
+}
+.location > h1 {
+    margin: 25px 0px;
+}
+.location > div {
+    display: flex;
+    flex-direction: column;
+}
+.location h2 {
+    font-size: 2.5em;
+}
+
+.location h1 {
+    font-size: 5em;
+}
+
 main > p:first-of-type {
     text-align: center;
 }
 
 main > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .dailyCast {
