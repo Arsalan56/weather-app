@@ -243,8 +243,10 @@ main {
 }
 
 .castCont > div {
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
+
+/* Top left box */
 
 .location h2,
 .location h1,
@@ -257,7 +259,6 @@ main {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    /* height: min-content; */
 }
 
 .location > h2 {
@@ -283,11 +284,60 @@ main > p:first-of-type {
 }
 
 main > div {
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .dailyCast {
     grid-column: 1 / -1;
+}
+
+/* Hourly forecast */
+
+.hourlyCast {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.hourlyCast > div {
+    display: flex;
+    flex-grow: 1;
+    background: var(--theme-1);
+    border: 2px solid var(--theme-2);
+    border-radius: 5px;
+    gap: 10px;
+    font-size: 1.2em;
+    flex-wrap: wrap;
+}
+.hourlyCast > div > div {
+    height: 150px;
+    padding: 10px 0px;
+    width: 75px;
+    min-height: 100px;
+    border: 2px solid black;
+    flex-grow: 1;
+    /* min-width: 100px; */
+    /* height: 200px; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hourlyCast > div > div > p:first-of-type,
+.hourlyCast img {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+.hourlyCast img {
+    height: 50px;
+    width: 50px;
+    justify-self: center;
 }
 
 /* https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15 */
