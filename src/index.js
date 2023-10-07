@@ -14,3 +14,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
         );
     // console.log(weather.forecast.forecastday[0].hour[8].condition.icon);
 });
+
+// eslint-disable-next-line no-restricted-globals
+addEventListener('resize', () => {
+    console.log('o');
+});

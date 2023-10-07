@@ -222,9 +222,9 @@ form {
 }
 
 main {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .castCont {
@@ -236,6 +236,7 @@ main {
 .location {
     flex-grow: 1;
     min-width: 250px;
+    padding-top: 10px;
 }
 
 .hourlyCast {
@@ -243,7 +244,7 @@ main {
     min-width: 400px;
 }
 
-/* Top left box */
+/* location style */
 
 .location h2,
 .location h1,
@@ -280,10 +281,6 @@ main > p:first-of-type {
     text-align: center;
 }
 
-main > div {
-    border: 1px solid black;
-}
-
 .dailyCast {
     grid-column: 1 / -1;
 }
@@ -299,6 +296,8 @@ main > div {
     box-sizing: border-box;
     align-items: center;
     padding: 0px 25px;
+    align-self: center;
+    height: min-content;
 }
 
 .hourlyCast > div {
@@ -314,7 +313,6 @@ main > div {
 .hourlyCast > div > div {
     height: 150px;
     padding: 5px;
-    /* border: 2px solid black; */
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
@@ -331,6 +329,53 @@ main > div {
     height: 50px;
     width: 50px;
     justify-self: center;
+}
+
+/* daily forecast */
+
+.dailyCast {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.dailyCont {
+    background: var(--theme-2);
+    border: 2px solid var(--theme-2);
+    display: flex;
+    /* padding: 5px; */
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+.dailyCont > div {
+    flex-grow: 1;
+    display: flex;
+    padding: 4px;
+    background: var(--theme-1);
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.dailyCast img {
+    height: 100px;
+    width: 100px;
+}
+.dailyTemp {
+    font-size: 1.3em;
+}
+
+.dailyCont p:first-of-type {
+    margin-top: 10px;
+}
+
+.dailyCont p:last-of-type {
+    margin-bottom: 10px;
 }
 
 /* https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15 */
