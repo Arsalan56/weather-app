@@ -15,7 +15,7 @@ export default async function GetWeather(i) {
                 errorMsg.textContent = '';
 
                 return fetch(
-                    `https://api.weatherapi.com/v1/forecast.json?key=4377390ce908483ab8510059232409&q=${i}`,
+                    `https://api.weatherapi.com/v1/forecast.json?key=4377390ce908483ab8510059232409&q=${i}&days=3`,
                     {
                         mode: 'cors',
                     }

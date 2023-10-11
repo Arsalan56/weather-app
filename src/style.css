@@ -352,8 +352,8 @@ main > p:first-of-type {
     width: 100%;
     justify-content: center;
     gap: 2px;
-    /* flex-wrap: wrap; */
     overflow: hidden;
+    max-width: 900px;
 }
 .dailyCont > div {
     flex-grow: 1;
@@ -373,6 +373,7 @@ main > p:first-of-type {
 
 .dailyCont > div > p:first-of-type {
     font-size: 1.2em;
+    margin-bottom: 6px;
 }
 
 .dailyCont > div:first-of-type > p:first-of-type {
