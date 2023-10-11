@@ -148,17 +148,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 15px;
+    padding: 6px 10px;
     min-height: 5%;
     font-size: 16px;
-    padding-top: 0px;
+    /* padding-top: 0px; */
     border-bottom: 2px solid var(--theme-2);
+    gap: 8px;
+}
+
+header > div:first-of-type > h1 {
+    text-align: center;
 }
 
 header input {
     border: 0px;
     /* color: white; */
-    width: clamp(100px, 40vw, 250px);
+    width: clamp(100px, 40vw, 300px);
     font-size: 1.1em;
     text-align: center;
     padding: 0px;
@@ -169,6 +174,9 @@ header input {
     color: var(--text-theme);
 }
 
+header > div:first-of-type > p {
+    font-size: 14px;
+}
 header > div {
     display: flex;
     align-items: center;

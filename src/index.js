@@ -14,6 +14,7 @@ import generalFill from './generalFill';
         // console.log(weather);
         hourlyFill(weather, true);
         generalFill(weather, true);
+        forecastFill(weather, true);
     });
 
     // eslint-disable-next-line no-restricted-globals
