@@ -1,4 +1,4 @@
-export default function hourlyFill(forecast) {
+export default function hourlyFill(forecast, degF) {
     const hour = document.querySelectorAll('.hourlyCast > div > div > img');
     const time = document.querySelectorAll(
         '.hourlyCast > div > div > p:first-of-type'
@@ -6,7 +6,7 @@ export default function hourlyFill(forecast) {
     const temp = document.querySelectorAll(
         '.hourlyCast > div > div > p:last-of-type'
     );
-    console.log(temp);
+    console.log(forecast);
     const currentHour = forecast.location.localtime.slice(
         forecast.location.localtime.indexOf(' '),
         forecast.location.localtime.indexOf(':')
@@ -27,8 +27,15 @@ export default function hourlyFill(forecast) {
         // variable used for getting time
         const currTime = forecast.forecast.forecastday[day].hour[ind].time;
         time[i].textContent = currTime.slice(currTime.indexOf(' '));
-        temp[
-            i
-        ].textContent = `${forecast.forecast.forecastday[day].hour[ind].temp_f}°F`;
+        // Check is degree is in fahrenheit or celsius
+        if (degF) {
+            temp[
+                i
+            ].textContent = `${forecast.forecast.forecastday[day].hour[ind].temp_f}°F`;
+        } else {
+            temp[
+                i
+            ].textContent = `${forecast.forecast.forecastday[day].hour[ind].temp_c}°C`;
+        }
     }
 }

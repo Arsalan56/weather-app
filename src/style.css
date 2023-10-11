@@ -281,6 +281,7 @@ main {
 
 main > p:first-of-type {
     text-align: center;
+    max-width: 20px;
 }
 
 .dailyCast {
