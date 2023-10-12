@@ -6,7 +6,6 @@ export default function hourlyFill(forecast, degF) {
     const temp = document.querySelectorAll(
         '.hourlyCast > div > div > p:last-of-type'
     );
-    console.log(forecast);
     const currentHour = forecast.location.localtime.slice(
         forecast.location.localtime.indexOf(' '),
         forecast.location.localtime.indexOf(':')

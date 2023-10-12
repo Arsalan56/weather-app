@@ -376,8 +376,8 @@ main > p:first-of-type {
 }
 
 .dailyCast img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .dailyCont > div > p:first-of-type {

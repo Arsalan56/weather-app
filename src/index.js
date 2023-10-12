@@ -5,6 +5,7 @@ import GetWeather from './getWeather';
 import Check from './sizeCheck';
 import hourlyFill from './hourlyFill';
 import generalFill from './generalFill';
+import dayFill from './dayFill';
 
 (() => {
     Check();
@@ -14,7 +15,8 @@ import generalFill from './generalFill';
         // console.log(weather);
         hourlyFill(weather, true);
         generalFill(weather, true);
-        forecastFill(weather, true);
+        generalFill(weather, true);
+        dayFill(weather, true);
     });
 
     // eslint-disable-next-line no-restricted-globals

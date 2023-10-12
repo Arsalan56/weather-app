@@ -17,5 +17,4 @@ export default function generalFill(weather, degF) {
         weather.location.localtime.slice(
             weather.location.localtime.indexOf(' ')
         );
-    console.log(weather);
 }
