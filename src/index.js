@@ -7,19 +7,30 @@ import hourlyFill from './hourlyFill';
 import generalFill from './generalFill';
 import dayFill from './dayFill';
 
-(() => {
+(async () => {
+    let weather = await GetWeather('Paris');
+    let degFaren = true;
+
     Check();
+    const FillAll = (wthr, CelsOrFaren) => {
+        hourlyFill(wthr, CelsOrFaren);
+        generalFill(wthr, CelsOrFaren);
+        generalFill(wthr, CelsOrFaren);
+        dayFill(wthr, CelsOrFaren);
+    };
+    FillAll(await GetWeather('Paris'), degFaren);
+
     document.querySelector('form').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const weather = await GetWeather(document.querySelector('input').value);
+        weather = await GetWeather(document.querySelector('input').value);
         // console.log(weather);
-        hourlyFill(weather, true);
-        generalFill(weather, true);
-        generalFill(weather, true);
-        dayFill(weather, true);
+        FillAll(weather, degFaren);
     });
 
-    // eslint-disable-next-line no-restricted-globals
-    // window.onresize = Check();
+    document.querySelector('.tempmode').addEventListener('click', () => {
+        degFaren = !degFaren;
+        FillAll(weather, degFaren);
+    });
+
     window.onresize = Check;
 })();

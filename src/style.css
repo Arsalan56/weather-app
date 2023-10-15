@@ -214,6 +214,7 @@ form {
     border: 2px solid var(--theme-2);
     border-radius: 5px;
     color: var(--text-theme);
+    cursor: pointer;
 }
 
 .search {
@@ -301,7 +302,6 @@ main > p:first-of-type {
 
 .hourlyCast {
     display: flex;
-    gap: 5px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -318,10 +318,10 @@ main > p:first-of-type {
     background: var(--theme-1);
     border: 2px solid var(--theme-2);
     border-radius: 20px;
-    gap: 10px;
     font-size: 1.2em;
     flex-wrap: wrap;
 }
+
 .hourlyCast > div > div {
     height: 150px;
     padding: 5px;
