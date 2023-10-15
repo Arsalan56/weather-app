@@ -196,6 +196,7 @@ form > button {
     font-size: 1.1em;
     color: var(--text-theme);
     border-left: 2px solid var(--theme-2);
+    cursor: pointer;
 }
 
 form {
@@ -235,6 +236,7 @@ main {
     flex-direction: column;
     gap: 30px;
     color: #1b4332;
+    cursor: default;
 }
 
 .castCont {
